@@ -3,6 +3,7 @@ import {getSearch} from "../../common/api";
 const React = require( 'react');
 // const {getForm,getList} = require( '../../common/api');
 // const React = require( 'react-router');
+
 // import { browserHistory  } from 'react-router'
 import Search from './../../components/Search';
 import Table from './../../components/Table';
