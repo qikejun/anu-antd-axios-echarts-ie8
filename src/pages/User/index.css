@@ -1,0 +1,17 @@
+.carousel-box {
+  width: 500px;
+  height: 300px;
+  display: inline-block; }
+  .carousel-box :global(.ant-carousel .slick-slider) {
+    padding-bottom: 0; }
+  .carousel-box :global(.ant-carousel .slick-dots li button:before) {
+    font-size: 30px;
+    color: #5bc0de; }
+  .carousel-box :global(.ant-carousel .slick-dots li.slick-active button:before) {
+    color: #fff;
+    opacity: 0.75; }
+  .carousel-box img {
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=index.css.map */

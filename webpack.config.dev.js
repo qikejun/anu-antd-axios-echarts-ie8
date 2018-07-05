@@ -58,7 +58,8 @@ module.exports = {
         historyApiFallback: true,
         progress: true,
         outputPath : BUILD_PATH,
-        host : "localhost",
+        host : "192.168.102.184",
+        // host : "localhost",
         port:8088,
         proxy:{
             "/api/*": {

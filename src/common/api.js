@@ -1,4 +1,4 @@
-let baseurl = "/mock/";
+let baseurl = "/mock/data/";
 let baseurl1 = "http://192.168.1.105";
 
 import axios from "axios";

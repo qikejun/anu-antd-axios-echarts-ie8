@@ -1,0 +1,45 @@
+/*
+Error: Invalid GBK character "\xE7"
+        on line 66 of table.scss
+
+61:     tr{
+62:       border-bottom: 1px #ededed solid;
+63:     }
+64:   }
+65: 
+66:   //灰白相间,藏蓝色表头,带标题
+67:   &_4, &_8, &_9{
+68:     font-size: 14px;
+69:     border: 1px #ddd solid;
+70:     border-bottom: 0;
+71:     border-collapse:separate;
+
+Backtrace:
+table.scss:66
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:1043:in `rescue in block in find_encoding_error'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:1040:in `block in find_encoding_error'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:1039:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:1039:in `each_with_index'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:1039:in `find_encoding_error'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/util.rb:767:in `check_sass_encoding'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/engine.rb:444:in `check_encoding!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/engine.rb:400:in `_to_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.5.6/bin/scss:13:in `<top (required)>'
+C:/Ruby22-x64/bin/scss:23:in `load'
+C:/Ruby22-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE7\"\A         on line 66 of table.scss\A \A 61:     tr{\A 62:       border-bottom: 1px #ededed solid;\A 63:     }\A 64:   }\A 65: \A 66:   //灰白相间,藏蓝色表头,带标题\A 67:   &_4, &_8, &_9{\A 68:     font-size: 14px;\A 69:     border: 1px #ddd solid;\A 70:     border-bottom: 0;\A 71:     border-collapse:separate;"; }

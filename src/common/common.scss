@@ -1,1 +1,8 @@
-$width100: 80%;
+$width100: 100%;
+input[type="radio"],
+input[type="checkbox"],
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+input{
+  outline: 0;
+}
