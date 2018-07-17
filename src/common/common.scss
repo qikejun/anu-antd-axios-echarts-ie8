@@ -6,3 +6,29 @@ input[type="checkbox"]:focus,
 input{
   outline: 0;
 }
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.hide{
+  display: none;
+}
+.vhide{
+  visibility: hidden;
+}
+/*公共样式*/
+/*统一处理英文数字及其他不换行字符问题*/
+*{
+  word-break: break-all;
+}
+.clear:after {
+  clear: both;
+  content: '';
+  display:  table;
+}
+/*重置样式*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
