@@ -8,3 +8,7 @@
 ``` npm install ```
 
 ``` npm run dev ```
+
+``` npm run build```
+
+build本地测试可以使用live-server在dist下启动
