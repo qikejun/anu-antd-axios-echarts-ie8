@@ -7,14 +7,13 @@ class Index extends  React.Component {
             dots: true,
             autoplay:true
         };
-
         return (
             <div className={styles["carousel-box"]}>
                 <Carousel autoplay {...settings}>
-                    <div><img src="./../../../mock/images/bg.jpg" alt=""/></div>
-                    <div><img src="./../../../mock/images/bg1.jpg" alt=""/></div>
-                    <div><img src="./../../../mock/images/bg2.jpg" alt=""/></div>
-                    <div><img src="./../../../mock/images/bg3.jpg" alt=""/></div>
+                    <div><img src={require("./../../mock/img/bg.jpg")} alt=""/></div>
+                    <div><img src={require("./../../mock/img/bg1.jpg")} alt=""/></div>
+                    <div><img src={require("./../../mock/img/bg2.jpg")} alt=""/></div>
+                    <div><img src={require("./../../mock/img/bg3.jpg")} alt=""/></div>
                 </Carousel>
             </div>
         )
