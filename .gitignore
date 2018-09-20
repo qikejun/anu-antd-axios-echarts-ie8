@@ -12,3 +12,4 @@ npm-debug.log*
 *.ntvs*
 *.njsproj
 *.sln
+package-lock.json
