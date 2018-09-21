@@ -33,10 +33,17 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,exclude: /node_modules/,loader: 'babel-loader'},
-            {test: /\.(png|jpg|gif|bmp|swf|woff|woff2|svg|eot|ttf)(\?.*$|$)/, loader: "url?limit=2048&name=img/[hash:5].[ext]" },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'img/[name].[hash:8].[ext]',
+                    publicPath:"/anu-antd-axios-echarts-ie8/build/"//处理css引用图片相对路径问题
+                }
+            },
             {test: /\.css$/,loader: "style!css"},
             {test:/\.less$/,loader: 'style-loader!css-loader!less-loader'},
-            // {test: /.(woff|woff2|svg|eot|ttf)??.*$/,exclude: /node_modules/, loader: 'file-loader?name=fonts/[name].[ext]'},
             {test: /\.scss$/,loader: ExtractTextPlugin.extract("style", "css?modules=true&sourceMap=true!postcss!sass", {publicPath: "./"})}
         ],
         postLoaders: [

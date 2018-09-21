@@ -1,11 +1,4 @@
-// import "../scss/common";
-import "./scss/common";
-import 'es5-shim'; //IE8 ^4.5.10
-import 'object-create-ie8';//IE8, 这样就不用加上es5-sham
-import 'object-defineproperty-ie8';//IE8，
-import 'console-polyfill';//IE8下，如果你不打开开发者工具，window下是没有console这个对象的，
-//只有打开了F12才会有这个方法
-
+import "../scss/common";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory ,browserHistory } from 'react-router';
