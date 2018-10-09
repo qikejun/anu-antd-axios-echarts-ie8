@@ -6,6 +6,7 @@
 ###项目运行
 
 ``` npm install ```
+``` 替换anu 下载包 ```
 
 ``` npm run dev ```
 
