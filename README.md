@@ -8,6 +8,9 @@
 ``` npm install ```
 ``` 替换anu 下载包 ```
 
+``` 使用 nodejs v6.11.4 ```
+
+
 ``` npm run dev ```
 
 ``` npm run build```
