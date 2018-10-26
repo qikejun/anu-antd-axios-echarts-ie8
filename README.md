@@ -10,6 +10,8 @@
 
 ``` 使用 nodejs v6.11.4 ```
 
+``` node 版本控制 nvm[https://github.com/creationix/nvm] ```
+
 
 ``` npm run dev ```
 
