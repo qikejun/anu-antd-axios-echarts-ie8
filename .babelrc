@@ -1,10 +1,33 @@
 {
-	"presets":[["env", {"loose": true}], "react","es2015"],
+	"presets":[
+      ["env", {
+      "module": false,
+      "loose": true,
+      "targets": {
+        "browsers": [
+          "ie >= 8",
+          "Chrome >= 21",
+          "Firefox >= 1",
+          "Edge >= 13",
+          "last 3 versions"
+        ]
+      }
+      }], "react","es2015"],
 	"plugins": [
 		["import", {
 			"libraryName": "antd",
 			"style": "css"
 		}],
-		"add-module-exports"
+		"add-module-exports",
+		"transform-object-rest-spread",
+		[
+			"transform-runtime",
+			{
+				"helpers": false,
+				"polyfill": false,
+				"regenerator": true,
+				"moduleName": "babel-runtime"
+			}
+		]
 	]
 }

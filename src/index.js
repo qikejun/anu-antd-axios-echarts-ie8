@@ -1,8 +1,13 @@
-import "../scss/common";
-import React from "react";
-import ReactDOM from "react-dom";
+import '../scss/common';
+require('console-polyfill');
+// require('es5-shim');
+// require('es5-shim/es5-sham');
+// require('media-match');
+import React from 'react';
+import createReactClass from 'create-react-class';
+import ReactDOM from 'react-dom';
 import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory ,browserHistory } from 'react-router';
-import {Navigation} from "./components";
+import {Navigation} from './components';
 import Index from './pages/User/Index';
 import Login from './pages/User/Login';
 import Register from './pages/User/Register';
@@ -19,7 +24,7 @@ class App extends React.Component{
         return (
             <div>
                 <Navigation />
-                <div className="container">
+                <div className='container'>
                 {this.props.children}
                 </div>
             </div>
@@ -30,21 +35,21 @@ class App extends React.Component{
 ReactDOM.render(
     // <Router history={hashHistory}>
     <Router history={browserHistory}>
-        <Route path="/" component={App}>
-            <IndexRedirect to="/Index" />
+        <Route path='/' component={App}>
+            <IndexRedirect to='/Index' />
             {/* 这块的注释一定要加外层大口号会有bug */}
             {/* <IndexRoute component={Page01}/> */}
-            <Route path="page01" component={Page01} />
-            <Route path="page02" component={Page02} />
-            <Route path="page03" component={Page03} />
-            <Route path="page04" component={Page04} />
-            <Route path="page05" component={Page05} />
-            <Route path="Index" component={Index} />
-            <Route path="Login" component={Login} />
-            <Route path="Register" component={Register} />
-            <Route path="ForgetPassword" component={ForgetPassword} />
-            <Route path="add" component={Add} />
+            <Route path='page01' component={Page01} />
+            <Route path='page02' component={Page02} />
+            <Route path='page03' component={Page03} />
+            <Route path='page04' component={Page04} />
+            <Route path='page05' component={Page05} />
+            <Route path='Index' component={Index} />
+            <Route path='Login' component={Login} />
+            <Route path='Register' component={Register} />
+            <Route path='ForgetPassword' component={ForgetPassword} />
+            <Route path='add' component={Add} />
         </Route>
     </Router>,
-    document.getElementById("app")
+    document.getElementById('app')
 )

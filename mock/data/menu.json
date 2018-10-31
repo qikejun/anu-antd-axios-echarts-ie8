@@ -1,0 +1,27 @@
+{
+    "code":0,
+    "data":[
+        {
+            "id":0,
+            "name":"采集专区",
+            "src":"page01"
+        },{
+            "id":1,
+            "name":"供应市场",
+            "src":"page02"
+        },{
+            "id":2,
+            "name":"需求市场",
+            "src":"page03?abc=123"
+        },{
+            "id":3,
+            "name":"专业市场",
+            "src":"page04"
+        },{
+            "id":4,
+            "name":"查询结果",
+            "src":"page05"
+        }
+    ],
+    "msg":"success"
+}
