@@ -1,5 +1,6 @@
 import "../scss/common";
 import React from "react";
+import createReactClass from 'create-react-class';
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory ,browserHistory } from 'react-router';
 import {Navigation} from "./components";
