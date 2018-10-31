@@ -6,12 +6,6 @@
 ###项目运行
 
 ``` npm install ```
-``` 替换anu 下载包 ```
-
-``` 使用 nodejs v6.11.4 ```
-
-node 版本控制 [nvm](https://github.com/creationix/nvm)
-
 
 ``` npm run dev ```
 
