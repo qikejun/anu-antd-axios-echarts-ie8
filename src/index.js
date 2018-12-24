@@ -1,8 +1,6 @@
 import '../scss/common';
 require('console-polyfill');
-// require('es5-shim');
-// require('es5-shim/es5-sham');
-// require('media-match');
+require('core-js');
 import React from 'react';
 import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';

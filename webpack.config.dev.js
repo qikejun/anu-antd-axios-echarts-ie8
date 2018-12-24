@@ -3,6 +3,7 @@ const webpack = require('webpack'),
     glob = require('glob'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
+    UglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin"),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
     autoprefixer = require('autoprefixer'),
     es3ifyPlugin = require('es3ify-webpack-plugin'),
@@ -52,7 +53,7 @@ module.exports = {
                     // }
                 // }
                 // use: 'babel-loader',
-                use: 'babel-loader',
+                // use: 'babel-loader',
             // {
             //     loader: 'es3ify-loader',
             // },
@@ -72,10 +73,11 @@ module.exports = {
                     //     ]
                     // }
                 // },
-                exclude:/node_modules/
+                // exclude:/node_modules/
+                loader: 'babel-loader', include:path.resolve(__dirname, 'src')
             },
             //     {test: /\.(js|jsx)(\?.*$|$)/,use: "es3ify-loader", enforce: "post"},
-            // {test: /\.(js|jsx)$/,use: 'export-from-ie8',enforce: "post"},
+            {test: /\.(js|jsx)$/,use: 'export-from-ie8/loader',enforce: "post",exclude:/node_modules/},
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 use: [{
@@ -141,41 +143,38 @@ module.exports = {
         //     {test: /\.(js|jsx)$/,loader: 'export-from-ie8/loader'}
         // ]
     },
-    // postcss: function () {
-    //     return [autoprefixer];
-    // },
     plugins: [
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
-        }),
-        new ExtractTextPlugin("./css/[name].[hash:5].css"),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            mangle: {
-                screw_ie8: false,
-                except: ['$']
-            },
-            mangleProperties: {
-                screw_ie8: false
-            },
-            compress:{
-                screw_ie8: false,
-                warnings: false
-            },
-            output: {
-                screw_ie8: false
-            },
-            support_ie8: true
-        }),
-        new HtmlWebpackPlugin({template : "src/index.html", favicon: './favicon.ico'}),
+        // new webpack.DefinePlugin({
+        //     'process.env': {
+        //         NODE_ENV: JSON.stringify('production')
+        //     }
+        // }),
         new es3ifyPlugin(),
+        new CleanWebpackPlugin("build", {root:ROOT_PATH}),
+        new HtmlWebpackPlugin({template : "src/index.html", favicon: './favicon.ico'}),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     sourceMap: true,
+        //     mangle: {
+        //         screw_ie8: false,
+        //         except: ['$']
+        //     },
+        //     mangleProperties: {
+        //         screw_ie8: false
+        //     },
+        //     compress:{
+        //         screw_ie8: false,
+        //         warnings: false
+        //     },
+        //     output: {
+        //         screw_ie8: false
+        //     },
+        //     support_ie8: true
+        // }),
+        new ExtractTextPlugin("./css/[name].[hash:5].css")
         // new PurifyCSSPlugin({
         //     paths: glob.sync(path.join(__dirname, 'src/*.html')),
         // }),
         // new webpack.HotModuleReplacementPlugin(),
-        new CleanWebpackPlugin("build", {root:ROOT_PATH})
 
     ],
     devServer: {

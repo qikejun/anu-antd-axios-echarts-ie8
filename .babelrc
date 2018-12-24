@@ -1,18 +1,19 @@
 {
 	"presets":[
-      ["env", {
-      "module": false,
-      "loose": true,
-      "targets": {
-        "browsers": [
-          "ie >= 8",
-          "Chrome >= 21",
-          "Firefox >= 1",
-          "Edge >= 13",
-          "last 3 versions"
-        ]
-      }
-      }], "react","es2015"],
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": ["last 2 versions", "ie >= 7"]
+				},
+				"modules": "commonjs",
+				"useBuiltIns": true,
+				"debug": false
+			}
+		],
+		"react",
+		"stage-2"
+	],
 	"plugins": [
 		["import", {
 			"libraryName": "antd",
@@ -23,10 +24,8 @@
 		[
 			"transform-runtime",
 			{
-				"helpers": false,
 				"polyfill": false,
-				"regenerator": true,
-				"moduleName": "babel-runtime"
+				"regenerator": true
 			}
 		]
 	]
