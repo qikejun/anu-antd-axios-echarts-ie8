@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Anu-Antd-Axios-Echarts-Ie8</title>
-    <!--<script src="https://cdn.bootcss.com/jquery/1.8.1/jquery.min.js"></script>-->
-    <!--<script src="https://as.alipayobjects.com/g/component/??console-polyfill/0.2.2/index.js,es5-shim/4.1.14/es5-shim.min.js,es5-shim/4.1.14/es5-sham.min.js,html5shiv/3.7.2/html5shiv.min.js,media-match/2.0.2/media.match.min.js"></script>-->
-    <script src="./src/assets/hack-ie8.js"></script>
+    <!--[if lt IE 8]>
+    <script>
+        if (typeof document.querySelector === 'undefined') {
+            document.querySelector = function (target) {
+                return document.getElementsByTagName(target)[0] || null;
+            }
+        }
+    </script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-shim.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-sham.min.js"></script>
+    <script src="http://cdn.bootcss.com/console-polyfill/0.3.0/index.min.js"></script>
+    <![endif]-->
 </head>
 <body>
     <div id="app"></div>

@@ -1,0 +1,18 @@
+{
+  "code":0,
+  "data":[
+    {
+      "url":"./../img/bg.jpg"
+    },
+    {
+      "url":"./../img/bg1.jpg"
+    },
+    {
+      "url":"./../img/bg2.jpg"
+    },
+    {
+      "url":"./../img/bg3.jpg"
+    }
+  ],
+  "msg":"success"
+}

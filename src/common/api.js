@@ -1,5 +1,5 @@
-let baseurl = "./src/mock/data/";
-let baseurl1 = "http://192.168.1.105";
+// let baseurl = "http://192.168.199.247:8088/mock/data/";
+let baseurl = "http://192.168.102.184:8088/mock/data/";
 
 import axios from "axios";
 
@@ -9,7 +9,15 @@ export let getMenu = async () => {
 }
 
 export let getList = async () => {
-    let response = await axios(baseurl+"list.json");
+    let response = await axios({
+        method: 'post',
+        headers: {
+            // 'X-Requested-With': 'XMLHttpRequest',
+            'Access-Control-Allow-Origin':'*',
+            'Content-Type' : 'application/json',
+                },
+            url: baseurl+"list.json"}
+        );
     return response.data
 }
  

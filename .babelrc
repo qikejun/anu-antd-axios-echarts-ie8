@@ -1,10 +1,32 @@
 {
-	"presets":[["env", {"loose": true}], "react","es2015"],
+	"presets":[
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": ["last 2 versions", "ie >= 7"]
+				},
+				"modules": "commonjs",
+				"useBuiltIns": true,
+				"debug": false
+			}
+		],
+		"react",
+		"stage-2"
+	],
 	"plugins": [
 		["import", {
 			"libraryName": "antd",
 			"style": "css"
 		}],
-		"add-module-exports"
+		"add-module-exports",
+		"transform-object-rest-spread",
+		[
+			"transform-runtime",
+			{
+				"polyfill": false,
+				"regenerator": true
+			}
+		]
 	]
 }

@@ -1,5 +1,5 @@
 import { Carousel } from 'antd';
-import styles from './index.scss'
+import styles from './index.scss';
 
 class Index extends  React.Component {
     render() {

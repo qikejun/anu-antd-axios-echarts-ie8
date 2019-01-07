@@ -103,7 +103,6 @@ ul {
 
 em{font-style: normal;}
 
-.relative{position: relative}
 .fr{float: right;}
 .fl{float: left;}
 .relative{position: relative}
@@ -111,5 +110,5 @@ em{font-style: normal;}
 .clearfix{@include clearfix;}
 .invisible{visibility: hidden}
 .ms-controller{visibility: hidden;}
-.hidden{display: none}
+.hide{display: none}
 .full{width: 100%}
