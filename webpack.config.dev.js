@@ -11,6 +11,7 @@ const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 module.exports = {
     entry: {
+        iefile: './src/assets/hack-ie8.js',
         polyfill : 'babel-polyfill',
         main : './src/index.js'
     },
@@ -57,7 +58,21 @@ module.exports = {
     plugins: [
         new es3ifyPlugin(),
         new ExtractTextPlugin("./css/[name].[hash:5].css"),
-        new HtmlWebpackPlugin({template : "src/index.html"}),
+        new HtmlWebpackPlugin({
+            title:'Anu-Antd-Axios-Echarts-Ie8',
+            template : "src/index.html",
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            },
+            inject: 'body',
+            chunks:['iefile','polyfill','main'],
+            chunksSortMode:'manual'
+        }),
         new CleanWebpackPlugin("build", {root:ROOT_PATH})
     ],
     devServer: {
@@ -68,13 +83,6 @@ module.exports = {
         // host : "localhost",
         host : "192.168.102.184",
         port:8088,
-        proxy:{
-            "/api/*": {
-                target: "http://localhost:8099",
-                changeOrigin: true,
-                secure: true,
-            }
-        }
     },
     devtool: 'source-map'
 }

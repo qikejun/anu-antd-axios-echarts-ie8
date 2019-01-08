@@ -4,6 +4,7 @@ const webpack = require('webpack'),
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
     autoprefixer = require('autoprefixer'),
+    optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin'),
     es3ifyPlugin = require('es3ify-webpack-plugin');
 
 const ROOT_PATH = path.resolve(__dirname, ".");
@@ -20,7 +21,7 @@ module.exports = {
     },
     //如果不需要react这段可以去掉
     resolve: {
-        root : ['./scss'],
+        root : ['./src/scss'],
         extensions: ['', '.js', '.jsx'],
         alias: {
             "react": "anujs/dist/ReactIE.js",
@@ -69,8 +70,21 @@ module.exports = {
     },
     plugins: [
         new es3ifyPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'polyfill',
+        }),
         new ExtractTextPlugin("./css/[name].[hash:5].css"),
+        //css压缩
+        new optimizeCssAssetsWebpackPlugin({
+            cssProcessor: require('cssnano'),   // 加载 cssnano 优化 css
+            cssProcessorOptions: {
+                discardComments: {
+                    removeAll: true // 删除所有注释
+                }
+            }
+        }),
         new HtmlWebpackPlugin({template : "src/index.html",favicon:'./favicon.ico'}),
+        //js压缩
         new webpack.optimize.UglifyJsPlugin({mangle : false, output : {keep_quoted_props:true}, compress : {properties:false, drop_console: true},comments:false}),
         new CleanWebpackPlugin("dist", {root:ROOT_PATH})
     ]
