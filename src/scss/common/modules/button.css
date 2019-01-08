@@ -1,0 +1,15 @@
+[class^=_Button] {
+  display: inline-block;
+  border: 0;
+  outline: 0; }
+
+._Button_1 {
+  display: block;
+  width: 100%;
+  line-height: 43px;
+  background: #ff7745;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px; }
+
+/*# sourceMappingURL=button.css.map */

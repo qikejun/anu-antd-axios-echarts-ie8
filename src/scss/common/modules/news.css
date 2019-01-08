@@ -1,0 +1,70 @@
+/*
+Error: Undefined mixin 'clearfix'.
+        on line 2 of news.scss, in `clearfix'
+        from line 2 of news.scss
+
+1: ._News{
+2:   @include clearfix;
+3: 
+4:   a:hover{text-decoration: underline;}
+5: 
+6:   &>li{
+7:     font-size: 14px;
+
+Backtrace:
+news.scss:2:in `clearfix'
+news.scss:2
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:98:in `block in with_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:98:in `with_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:440:in `map'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:135:in `with_frame'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/stack.rb:79:in `with_base'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:209:in `each'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/plugin.rb:82:in `update_stylesheets'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/exec/sass_scss.rb:51:in `process_result'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/exec/base.rb:50:in `parse'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/lib/sass/exec/base.rb:18:in `parse!'
+D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.2/bin/scss:13:in `<top (required)>'
+D:/Ruby24-x64/bin/scss:23:in `load'
+D:/Ruby24-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'clearfix'.\A         on line 2 of news.scss, in `clearfix'\A         from line 2 of news.scss\A \A 1: ._News{\A 2:   @include clearfix;\A 3: \A 4:   a:hover{text-decoration: underline;}\A 5: \A 6:   &>li{\A 7:     font-size: 14px;"; }

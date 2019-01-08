@@ -1,0 +1,15 @@
+.Breadcrumb {
+  line-height: 50px;
+  color: #999;
+  font-size: 14px; }
+  .Breadcrumb a {
+    color: inherit;
+    transition: color 0.3s ease; }
+  .Breadcrumb a:before, .Breadcrumb span:before {
+    content: ">";
+    padding: 0 10px; }
+  .Breadcrumb a:first-child:before {
+    display: none;
+    padding-left: 0; }
+
+/*# sourceMappingURL=breadcrumb.css.map */

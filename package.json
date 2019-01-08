@@ -40,8 +40,8 @@
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
-    "antd": "1.11.6",
-    "anujs": "^1.4.7",
+    "antd": "1.x",
+    "anujs": "^1.4.9",
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.5",

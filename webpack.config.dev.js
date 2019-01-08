@@ -20,7 +20,7 @@ module.exports = {
     },
     //如果不需要react这段可以去掉
     resolve: {
-        root : ['./scss'],
+        root : ['./src/scss'],
         extensions: ['', '.js', '.jsx'],
         alias: {
             "react": "anujs/dist/ReactIE.js",
@@ -44,7 +44,7 @@ module.exports = {
             },
             {test: /\.css$/,loader: "style!css"},
             {test:/\.less$/,loader: 'style-loader!css-loader!less-loader'},
-            {test: /\.scss$/,loader: ExtractTextPlugin.extract("style", "css?modules=true&sourceMap=true!postcss!sass", {publicPath: "./"})}
+            {test: /\.scss$/,loader: ExtractTextPlugin.extract("style", "css?modules=true&sourceMap=true!postcss!sass")}
         ],
         postLoaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,loader: "es3ify-loader"},

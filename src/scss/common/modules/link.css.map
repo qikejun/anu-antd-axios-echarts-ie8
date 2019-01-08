@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,iBAAY;EAAC,eAAe,EAAE,SAAS",
+"sources": ["link.scss"],
+"names": [],
+"file": "link.css"
+}
