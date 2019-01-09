@@ -11,7 +11,7 @@ const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 module.exports = {
     entry: {
-        iefile: './src/assets/hack-ie8.js',
+        // iefile: './src/assets/hack-ie8.js',
         polyfill : 'babel-polyfill',
         main : './src/index.js'
     },
@@ -61,17 +61,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title:'Anu-Antd-Axios-Echarts-Ie8',
             template : "src/index.html",
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true
-            },
-            inject: 'body',
-            chunks:['iefile','polyfill','main'],
-            chunksSortMode:'manual'
         }),
         new CleanWebpackPlugin("build", {root:ROOT_PATH})
     ],
