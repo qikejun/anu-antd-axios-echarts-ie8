@@ -69,6 +69,7 @@ class Add extends React.Component {
     return (
       <div>
         <Form horizontal>
+          <img src={require('./../../assets/img/n.png')} alt=""/>
           <FormItem
             id="control-input"
             label="name"

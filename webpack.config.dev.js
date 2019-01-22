@@ -19,7 +19,7 @@ module.exports = {
     },
     output: {
         path: BUILD_PATH,
-        filename: 'js/[name].[hash:5].js'
+        filename: 'js/[name].[hash:8].js'
     },
     //如果不需要react这段可以去掉
     resolve: {
@@ -37,12 +37,12 @@ module.exports = {
         loaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,exclude: /node_modules/,loader: 'babel-loader'},
             {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff)(\?.*)?$/,
                 loader: 'url-loader',
-                options: {
-                    limit: 10000,
+                query: {
+                    limit: 50000,
                     name: 'img/[name].[hash:8].[ext]',
-                    publicPath:"/anu-antd-axios-echarts-ie8/build/"//处理css引用图片相对路径问题
+                    publicPath:'/'//处理css引用图片相对路径问题
                 }
             },
             {test: /\.css$/,loader: "style!css"},
@@ -67,12 +67,12 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendors'],
-            filename: 'vendors.[hash:5].js',
+            filename: 'vendors.[hash:8].js',
             minChunks: Infinity
         }
-            // 'vendors', 'vendors.[hash:5].js'
+            // 'vendors', 'vendors.[hash:8].js'
         ),
-        new ExtractTextPlugin("./css/[name].[hash:5].css"),
+        new ExtractTextPlugin("./css/[name].[hash:8].css"),
         new HtmlWebpackPlugin({
             title:'Anu-Antd-Axios-Echarts-Ie8',
             template : "src/index.html",

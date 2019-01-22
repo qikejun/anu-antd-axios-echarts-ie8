@@ -14,6 +14,8 @@ import Page03 from './pages/Page03';
 import Page04 from './pages/Page04';
 import Page05 from './pages/Page05';
 import Add from './pages/Add';
+import './assets/iconfont/iconfont.css';
+
 
 class App extends React.Component{
     render() {

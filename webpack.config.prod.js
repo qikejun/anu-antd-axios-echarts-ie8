@@ -18,7 +18,7 @@ module.exports = {
     },
     output: {
         path: BUILD_PATH,
-        filename: 'js/[name].[hash:5].js'
+        filename: 'js/[name].[hash:8].js'
     },
     //如果不需要react这段可以去掉
     resolve: {
@@ -35,25 +35,13 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.(js|jsx)(\?.*$|$)/,exclude: /node_modules/,loader: 'babel-loader'},
-            // {
-            //     test: /\.html$/,
-            //     loader: 'html-loader'
-            // },
-       /*     {
-                test: /\.(png|jpg|gif)$/,
-                loader: 'file-loader',
-                useRelativePath:true,
-                query:{
-                    name:'img/[name]-[hash:5].[ext]'  //这里img是存放打包后图片文件夹，结合publicPath来看就是/webBlog/build/img文件夹中，后边接的是打包后图片的命名方式。
-                }
-            },*/
             {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                test: /\.(png|jpe?g|gif|svg|eot|ttf|woff)(\?.*)?$/,
                 loader: 'url-loader',
-                options: {
-                    limit: 10000,
+                query: {
+                    limit: 50000,
                     name: 'img/[name].[hash:8].[ext]',
-                    publicPath:"/anu-antd-axios-echarts-ie8/dist/"//处理css引用图片相对路径问题
+                    publicPath:"/"//处理css引用图片相对路径问题
                 }
             },
             // {test: /\.json$/,loader: "json"},
@@ -78,13 +66,13 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendors'],
-            filename: 'vendors.[hash:5].js',
+            filename: 'vendors.[hash:8].js',
             minChunks: Infinity
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'polyfill',
         }),
-        new ExtractTextPlugin("./css/[name].[hash:5].css"),
+        new ExtractTextPlugin("./css/[name].[hash:8].css"),
         //css压缩
         new optimizeCssAssetsWebpackPlugin({
             cssProcessor: require('cssnano'),   // 加载 cssnano 优化 css

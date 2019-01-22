@@ -3,7 +3,7 @@
   display: inline-block;
   text-align: center;
   margin: 10px 0;
-  background: url("./../../assets/img/h.png") no-repeat;
+  background: url("../../assets/img/h.jpg") no-repeat;
 }
 .box{
   background-color: pink;
@@ -54,4 +54,8 @@
 
 .ant-pwd-strength-high .ant-pwd-strength-item-3 {
   background-color: #87D068;
+}
+.tip_text{
+  font-size: 20px;
+  color: #00b3ee;
 }

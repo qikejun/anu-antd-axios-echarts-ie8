@@ -58,6 +58,7 @@ class Login extends React.Component {
         });
         return (
             <Form horizontal onSubmit={this.handleSubmit.bind(this)} className="login-form">
+                <img src={require('./../../assets/img/n.png')} alt=""/>
                 <FormItem label="用户名"
                           {...formItemLayout}
                           hasFeedback

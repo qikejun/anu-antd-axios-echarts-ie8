@@ -136,6 +136,7 @@ class Page03 extends React.Component{
       var is=true;
         return (
             <div>
+                <i className={`icon iconfont icon-shoucang ${styles.tip_text}`}></i>
             <Steps current={3} status="error">
             <Step title="已完成" description="这里是多信息的描述" />
             <Step title="进行中" description="这里是多信息的描述" />
