@@ -13,7 +13,8 @@ const BUILD_PATH = path.resolve(ROOT_PATH, 'dist');
 module.exports = {
     entry: {
         polyfill : 'babel-polyfill',
-        main : './src/index.js'
+        main : './src/index.js',
+        vendors: ['axios','echarts', 'moment','pubsub-js']
     },
     output: {
         path: BUILD_PATH,
@@ -70,6 +71,16 @@ module.exports = {
     },
     plugins: [
         new es3ifyPlugin(),
+        new webpack.DefinePlugin({'process.env': {
+                //注意一个单引号一个双引号…… 这里是要将 "production" 替换到文件里面
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['vendors'],
+            filename: 'vendors.[hash:5].js',
+            minChunks: Infinity
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'polyfill',
         }),

@@ -6,6 +6,7 @@ const webpack = require('webpack'),
     autoprefixer = require('autoprefixer'),
     es3ifyPlugin = require('es3ify-webpack-plugin');
 
+
 const ROOT_PATH = path.resolve(__dirname, ".");
 const BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
@@ -13,7 +14,8 @@ module.exports = {
     entry: {
         // iefile: './src/assets/hack-ie8.js',
         polyfill : 'babel-polyfill',
-        main : './src/index.js'
+        main : './src/index.js',
+        vendors: ['axios','echarts', 'moment','pubsub-js']
     },
     output: {
         path: BUILD_PATH,
@@ -57,6 +59,19 @@ module.exports = {
     },
     plugins: [
         new es3ifyPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                //注意一个单引号一个双引号…… 这里是要将 "production" 替换到文件里面
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['vendors'],
+            filename: 'vendors.[hash:5].js',
+            minChunks: Infinity
+        }
+            // 'vendors', 'vendors.[hash:5].js'
+        ),
         new ExtractTextPlugin("./css/[name].[hash:5].css"),
         new HtmlWebpackPlugin({
             title:'Anu-Antd-Axios-Echarts-Ie8',
