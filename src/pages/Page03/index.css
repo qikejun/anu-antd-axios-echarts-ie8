@@ -50,6 +50,7 @@
 
 .tip_text {
   font-size: 20px;
-  color: #00b3ee; }
+  color: #00b3ee;
+  display: inline-block; }
 
 /*# sourceMappingURL=index.css.map */

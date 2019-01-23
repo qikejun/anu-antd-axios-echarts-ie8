@@ -39,7 +39,7 @@ module.exports = {
                 test: /\.(png|jpe?g|gif|svg|eot|ttf|woff)(\?.*)?$/,
                 loader: 'url-loader',
                 query: {
-                    limit: 50000,
+                    limit: 1000,
                     name: 'img/[name].[hash:8].[ext]',
                     publicPath:"/"//处理css引用图片相对路径问题
                 }

@@ -13,6 +13,7 @@ class Index extends  React.Component {
         {/*<div><img src={require("./mock/img/bg3.jpg")} alt=""/></div>*/}
         return (
             <div className={styles["carousel-box"]}>
+                <i className="icon iconfont icon-shoucang"></i>
                 <Carousel autoplay {...settings}>
                     <div><img src={"./mock/img/bg.jpg"} alt=""/></div>
                     <div><img src={"./mock/img/bg1.jpg"} alt=""/></div>
