@@ -11,4 +11,4 @@
 
 ``` npm run build```
 
-build本地测试可以使用live-server在dist下启动
+build本地测试可以使用[live-server](https://www.npmjs.com/package/live-server)在dist下启动
