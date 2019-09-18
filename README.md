@@ -3,8 +3,6 @@
 
 [anujs](https://rubylouvre.github.io/anu/index.html)  [antd](https://ant.design/index-cn)   [echarts](https://www.echartsjs.com/index.html)
 
-> 只是测试工程，个人建议，如果前端团队人少（3-5个人）不要使用，对于兼容ie8+问题，做过这块兼容问题项目的人应该了解，这块的问题不可能一下子全部解决，不同业务逻辑中会有不同的问题需要解决，小团队没有精力，时间，能力去解决所有问题。
-
 需要ie8+的自行车，来ie8+的自行车给你 :bicyclist: :bicyclist: :bicyclist:
 
 ###项目运行
