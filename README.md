@@ -5,6 +5,7 @@
 
 需要ie8+的自行车，来ie8+的自行车给你 :bicyclist: :bicyclist: :bicyclist:
 
+> ie8 问题是无穷无尽的
 ###项目运行
 
 ``` npm install ```
