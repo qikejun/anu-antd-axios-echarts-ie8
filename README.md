@@ -1,5 +1,5 @@
 # anu-antd-axios-echarts-ie8
-##测试工程 为了更好的兼容ie8+
+## 测试工程 为了更好的兼容ie8+
 
 [anujs](https://rubylouvre.github.io/anu/index.html)  [antd](https://ant.design/index-cn)   [echarts](https://www.echartsjs.com/index.html)
 
@@ -7,7 +7,7 @@
 
 > ie8 问题是无穷无尽的
 
-###项目运行
+### 项目运行
 
 ``` npm install ```
 
